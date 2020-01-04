@@ -440,3 +440,118 @@ Save succeed: True
 Elapsed time: 0m 0s 115ms
 Error: ---
 ]
+LogEntry from 4 sty 2020 16:25:00
+[
+Selected method: PSql
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 36ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:25:06
+[
+Selected method: EF
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 875ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:25:11
+[
+Selected method: NHib
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 643ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:26:03
+[
+Selected method: NHib
+Selected size: 100000
+Save succeed: True
+Elapsed time: 0m 10s 64ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:30:55
+[
+Selected method: EF
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 769ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:30:58
+[
+Selected method: NHib
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 624ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:31:00
+[
+Selected method: PSql
+Selected size: 100
+Save succeed: True
+Elapsed time: 0m 0s 38ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:31:14
+[
+Selected method: EF
+Selected size: 1000
+Save succeed: True
+Elapsed time: 0m 0s 417ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:31:17
+[
+Selected method: NHib
+Selected size: 1000
+Save succeed: True
+Elapsed time: 0m 0s 117ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:31:42
+[
+Selected method: EF
+Selected size: 10000
+Save succeed: True
+Elapsed time: 0m 15s 452ms
+Error: ---
+]
+LogEntry from 4 sty 2020 16:32:16
+[
+Selected method: PSql
+Selected size: 100000
+Save succeed: True
+Elapsed time: 0m 24s 687ms
+Error: ---
+]
+LogEntry from 4 sty 2020 17:18:25
+[
+Selected method: PSql
+Selected size: 10
+Number of tests: 1
+Save succeed: True
+Elapsed time: 0m 0s 10ms
+Error: ---
+]
+LogEntry from 4 sty 2020 17:18:40
+[
+Selected method: PSql
+Selected size: 10
+Number of tests: 2
+Save succeed: True
+Elapsed time: 0m 0s 8ms
+Error: ---
+]
+LogEntry from 4 sty 2020 17:18:43
+[
+Selected method: PSql
+Selected size: 10
+Number of tests: 2
+Save succeed: True
+Elapsed time: 0m 0s 10ms
+Error: ---
+]

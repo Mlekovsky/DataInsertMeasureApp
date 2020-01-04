@@ -159,12 +159,22 @@ namespace DataInserter
                 return;
             }
 
+            int numberOfTests = GetNumberOfTests();
+
+            if (numberOfTests == 0)
+            {
+                MessageBox.Show("Please enter a valid number");
+                return;
+            }
+
+            SetCleanDBFlag();
+
             if (FileExists())
             {
                 int currFileSize = GetFileSize();
                 if (currFileSize == destFileSize)
                 {
-                    StartTest(currFileSize, InsertMethodName);
+                    StartTest(currFileSize, InsertMethodName, numberOfTests);
                 }
                 else if (currFileSize == 0)
                 {
@@ -181,11 +191,23 @@ namespace DataInserter
             }
         }
 
-        private void StartTest(int fileSize, string insertMethodName)
+        private void SetCleanDBFlag()
+        {
+            refreshDatabaseAfterTest = CleanDBCheckbox.IsChecked.Value;
+        }
+
+        private int GetNumberOfTests()
+        {
+            int number = 1;
+
+            Int32.TryParse(NumberOfTests.Text, out number);
+
+            return number;
+        }
+
+        private void StartTest(int fileSize, string insertMethodName, int numberOfTests = 1)
         {
             Stopwatch sw = new Stopwatch();
-
-            sw.Start();
 
             IDataInserter dataInserter = CreateDataInserterClassInstance(insertMethodName);
 
@@ -195,11 +217,19 @@ namespace DataInserter
 
             string errorMsg = "---";
 
+            sw.Start();
+
             try
             {
-                dataInserter.SaveDataToDataBase();
+                for (int i = 0; i < numberOfTests; i++)
+                {
+                    dataInserter.SaveDataToDataBase();
+
+                    if (refreshDatabaseAfterTest)
+                        CleanDataBase();
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 success = false;
                 errorMsg = ex.ToString();
@@ -213,18 +243,16 @@ namespace DataInserter
 [
 Selected method: {insertMethodName}
 Selected size: {fileSize}
+Number of tests: {numberOfTests}
 Save succeed: {success}
 Elapsed time: {sw.Elapsed.Minutes}m {sw.Elapsed.Seconds}s {sw.Elapsed.Milliseconds}ms
 Error: {errorMsg}
 ]");
             }
 
-            if (refreshDatabaseAfterTest)
-                CleanDataBase();
-
             CheckDbSize();
 
-            MessageBox.Show($"Test completed, Success: {success}");
+            MessageBox.Show($"{numberOfTests} test(s) completed, Success: {success}");
         }
 
         private IDataInserter CreateDataInserterClassInstance(string insertMethodName)
