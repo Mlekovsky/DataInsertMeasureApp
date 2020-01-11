@@ -174,7 +174,9 @@ namespace DataInserter
                 int currFileSize = GetFileSize();
                 if (currFileSize == destFileSize)
                 {
-                    StartTest(currFileSize, InsertMethodName, numberOfTests);
+                    bool success = StartTest(currFileSize, InsertMethodName, numberOfTests);
+                    MessageBox.Show($"{numberOfTests} test(s) completed, Success: {success}");
+
                 }
                 else if (currFileSize == 0)
                 {
@@ -205,7 +207,7 @@ namespace DataInserter
             return number;
         }
 
-        private void StartTest(int fileSize, string insertMethodName, int numberOfTests = 1)
+        private bool StartTest(int fileSize, string insertMethodName, int numberOfTests = 1)
         {
             Stopwatch sw = new Stopwatch();
 
@@ -252,7 +254,7 @@ Error: {errorMsg}
 
             CheckDbSize();
 
-            MessageBox.Show($"{numberOfTests} test(s) completed, Success: {success}");
+            return success;
         }
 
         private IDataInserter CreateDataInserterClassInstance(string insertMethodName)
