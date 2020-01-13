@@ -11,5 +11,6 @@ namespace DataInserter.Model.Interface
         void LoadDataFromFile(int fileSize);
 
         bool SaveDataToDataBase();
+
     }
 }

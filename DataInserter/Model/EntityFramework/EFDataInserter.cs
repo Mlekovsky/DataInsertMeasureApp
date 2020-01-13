@@ -29,6 +29,7 @@ namespace DataInserter.Model.EntityFramework
                 }
                 context.SaveChanges();
             }
+
             return true;
         }
     }

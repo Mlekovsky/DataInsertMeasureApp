@@ -36,11 +36,12 @@ namespace DataInserter.Model.PlainSql
 
                 sqlConnection.Close();
             }
-
-           //In case of debug:
-           //SaveDataFromDataBaseToFile();
-
+         
             return true;
+        }
+        public PlainSqlDataInserter()
+        {
+
         }
     }
 }

@@ -35,6 +35,8 @@ namespace DataInserter
         private const string basicTimeLog = @"BasicTimeLog";
         private const string debugInfoFile = @"DebugInfo";
         private bool refreshDatabaseAfterTest = false;
+        PerformanceCounter cpuCounter;
+        PerformanceCounter ramCounter;
 
         private static Random random = new Random();
 
@@ -210,6 +212,13 @@ namespace DataInserter
         private bool StartTest(int fileSize, string insertMethodName, int numberOfTests = 1)
         {
             Stopwatch sw = new Stopwatch();
+            ramCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");
+            cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            //ramCounter = new PerformanceCounter("Process", "Private Bytes", Process.GetCurrentProcess().ProcessName);
+            //cpuCounter = new PerformanceCounter("Process", "% Processor Time", Process.GetCurrentProcess().ProcessName);
+            //Process.GetCurrentProcess().ProcessName
+            List<float> ramMeasureData = new List<float>();
+            List<float> cpuMeasureData = new List<float>();
 
             IDataInserter dataInserter = CreateDataInserterClassInstance(insertMethodName);
 
@@ -221,11 +230,17 @@ namespace DataInserter
 
             sw.Start();
 
+            ramMeasureData.Add(getAvailableRAM()); //Get first default value
+            cpuMeasureData.Add(getCurrentCpuUsage()); //Get first default value
+
             try
             {
                 for (int i = 0; i < numberOfTests; i++)
                 {
                     dataInserter.SaveDataToDataBase();
+
+                    ramMeasureData.Add(getAvailableRAM());
+                    cpuMeasureData.Add(getCurrentCpuUsage());
 
                     if (refreshDatabaseAfterTest)
                         CleanDataBase();
@@ -243,13 +258,28 @@ namespace DataInserter
             {
                 file.WriteLine($@"LogEntry from {DateTime.Now}
 [
+------Basic data---------
 Selected method: {insertMethodName}
 Selected size: {fileSize}
 Number of tests: {numberOfTests}
-Save succeed: {success}
+
+------Measure Data-------
 Elapsed time: {sw.Elapsed.Minutes}m {sw.Elapsed.Seconds}s {sw.Elapsed.Milliseconds}ms
+CPU:
+Minimum CPU Usage: {cpuMeasureData.Min()}
+Maximum CPU Usage: {cpuMeasureData.Max()}
+Average CPU Usage: {cpuMeasureData.Average()}
+Memory:
+Minimum Memory Usage: {ramMeasureData.Min()}
+Maximum Memory Usage: {ramMeasureData.Max()}
+Average Memory Usage: {ramMeasureData.Average()}
+
+----------Stauts---------
+Save succeed: {success}
 Error: {errorMsg}
-]");
+]
+
+");
             }
 
             CheckDbSize();
@@ -368,6 +398,16 @@ Error: {errorMsg}
         {
             SaveDataFromDataBaseToFile();
             MessageBox.Show("Save complete");
+        }
+
+        public float getCurrentCpuUsage()
+        {
+            return cpuCounter.NextValue();
+        }
+
+        public float getAvailableRAM()
+        {
+            return ramCounter.NextValue();
         }
     }
 }

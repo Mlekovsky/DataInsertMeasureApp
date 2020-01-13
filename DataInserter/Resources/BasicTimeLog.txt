@@ -1,575 +1,480 @@
-LogEntry from 3 sty 2020 17:37:45
+LogEntry from 13 sty 2020 19:23:57
 [
-Selected method: PSql
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 0ms
-]
-LogEntry from 3 sty 2020 17:38:23
-[
-Selected method: PSql
-Selected size: 1000
-Save succeed: True
-Elapsed time: 0m 0s 0ms
-]
-LogEntry from 3 sty 2020 17:40:20
-[
-Selected method: PSql
-Selected size: 1000
-Save succeed: True
-Elapsed time: 0m 1s 1ms
-]
-LogEntry from 3 sty 2020 17:45:53
-[
-Selected method: PSql
-Selected size: 1000
-Save succeed: True
-Elapsed time: 0m 0s 1ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:03:05
-[
+------Basic data---------
 Selected method: PSql
 Selected size: 10
-Save succeed: False
-Elapsed time: 0m 0s 41ms
-Error: System.NullReferenceException: Object reference not set to an instance of an object.
-   at DataInserter.Model.PlainSql.PlainSqlDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\PlainSql\PlainSqlDataInserter.cs:line 30
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 195
-]
-LogEntry from 3 sty 2020 18:04:18
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: False
-Elapsed time: 0m 11s 227ms
-Error: System.NullReferenceException: Object reference not set to an instance of an object.
-   at DataInserter.Model.PlainSql.PlainSqlDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\PlainSql\PlainSqlDataInserter.cs:line 30
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 195
-]
-LogEntry from 3 sty 2020 18:08:07
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: False
-Elapsed time: 0m 31s 69ms
-Error: System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'C:\PROJECTS\DATAINSERTER\DATAINSERTER\DATAINSERTER\BIN\DEBUG\LOCALDB\LOCALDATABASE.MDF.dbo.TableToInsert'; column does not allow nulls. INSERT fails.
-The statement has been terminated.
-   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
-   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
-   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
-   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
-   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
-   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
-   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at DataInserter.Model.PlainSql.PlainSqlDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\PlainSql\PlainSqlDataInserter.cs:line 35
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 195
-ClientConnectionId:ee044de0-b4c9-4073-ad00-7bafa7b2d836
-Error Number:515,State:2,Class:16
-]
-LogEntry from 3 sty 2020 18:11:55
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: False
-Elapsed time: 1m 42s 118ms
-Error: System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'C:\PROJECTS\DATAINSERTER\DATAINSERTER\DATAINSERTER\BIN\DEBUG\LOCALDB\LOCALDATABASE.MDF.dbo.TableToInsert'; column does not allow nulls. INSERT fails.
-The statement has been terminated.
-   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
-   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
-   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
-   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
-   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
-   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
-   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at DataInserter.Model.PlainSql.PlainSqlDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\PlainSql\PlainSqlDataInserter.cs:line 35
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 195
-ClientConnectionId:0a839e7f-1e4b-4da4-83c0-88e54ad71936
-Error Number:515,State:2,Class:16
-]
-LogEntry from 3 sty 2020 18:17:24
-[
-Selected method: PSql
-Selected size: 10
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 0s 296ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 100
+Average CPU Usage: 72,01661
+Memory:
+Minimum Memory Usage: 52,99882
+Maximum Memory Usage: 53,01259
+Average Memory Usage: 53,00359
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 5s 889ms
 Error: ---
 ]
-LogEntry from 3 sty 2020 18:21:35
+
+
+LogEntry from 13 sty 2020 19:24:03
 [
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 13s 472ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:30:41
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 6s 492ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:33:02
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 1s 225ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:34:26
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 3s 418ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:34:30
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 8ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:35:26
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 7ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:38:17
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 211ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:38:18
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 14ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:38:19
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 7ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:01
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 156ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:17
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 152ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:19
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 7ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:21
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 8ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:27
-[
-Selected method: PSql
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 34ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:53:35
-[
-Selected method: PSql
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 36ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:54:12
-[
-Selected method: PSql
-Selected size: 100000
-Save succeed: True
-Elapsed time: 0m 24s 618ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:54:22
-[
-Selected method: PSql
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 32ms
-Error: ---
-]
-LogEntry from 3 sty 2020 18:59:00
-[
-Selected method: PSql
-Selected size: 100000
-Save succeed: True
-Elapsed time: 0m 24s 701ms
-Error: ---
-]
-LogEntry from 4 sty 2020 13:57:25
-[
+------Basic data---------
 Selected method: EF
 Selected size: 10
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 1s 127ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 100
+Average CPU Usage: 69,75418
+Memory:
+Minimum Memory Usage: 53,16369
+Maximum Memory Usage: 53,18691
+Average Memory Usage: 53,17817
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 3s 99ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 14:01:27
+
+
+LogEntry from 13 sty 2020 19:24:07
 [
-Selected method: EF
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 741ms
-Error: ---
-]
-LogEntry from 4 sty 2020 14:01:31
-[
-Selected method: EF
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 5ms
-Error: ---
-]
-LogEntry from 4 sty 2020 14:01:34
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 9ms
-Error: ---
-]
-LogEntry from 4 sty 2020 14:09:40
-[
-Selected method: EF
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 721ms
-Error: ---
-]
-LogEntry from 4 sty 2020 14:09:42
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 9ms
-Error: ---
-]
-LogEntry from 4 sty 2020 15:18:27
-[
+------Basic data---------
 Selected method: NHib
 Selected size: 10
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 0s 277ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 100
+Average CPU Usage: 78,22799
+Memory:
+Minimum Memory Usage: 53,12206
+Maximum Memory Usage: 53,13616
+Average Memory Usage: 53,1325
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 729ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:18:32
+
+
+LogEntry from 13 sty 2020 19:24:20
 [
-Selected method: EF
-Selected size: 10
-Save succeed: False
-Elapsed time: 0m 0s 350ms
-Error: System.Data.Entity.Core.MetadataException: Schema specified is not valid. Errors: 
-The mapping of CLR type to EDM type is ambiguous because multiple CLR types match the EDM type 'TableToInsert'. Previously found CLR type 'DataInserter.Model.EntityFramework.TableToInsert', newly found CLR type 'DataInserter.Model.NHibernate.TableToInsert'.
-   at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
-   at System.Data.Entity.DbSet`1.Add(TEntity entity)
-   at DataInserter.Model.EntityFramework.EFDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\EntityFramework\EFDataInserter.cs:line 24
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 200
-]
-LogEntry from 4 sty 2020 15:18:34
-[
+------Basic data---------
 Selected method: PSql
-Selected size: 10
+Selected size: 100
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 2s 610ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 72,99432
+Average CPU Usage: 22,44668
+Memory:
+Minimum Memory Usage: 53,43178
+Maximum Memory Usage: 53,44048
+Average Memory Usage: 53,43665
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 7ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:18:41
+
+
+LogEntry from 13 sty 2020 19:24:26
 [
+------Basic data---------
 Selected method: EF
-Selected size: 10
-Save succeed: False
-Elapsed time: 0m 0s 12ms
-Error: System.Data.Entity.Core.MetadataException: Schema specified is not valid. Errors: 
-The mapping of CLR type to EDM type is ambiguous because multiple CLR types match the EDM type 'TableToInsert'. Previously found CLR type 'DataInserter.Model.EntityFramework.TableToInsert', newly found CLR type 'DataInserter.Model.NHibernate.TableToInsert'.
-   at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
-   at System.Data.Entity.DbSet`1.Add(TEntity entity)
-   at DataInserter.Model.EntityFramework.EFDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\EntityFramework\EFDataInserter.cs:line 24
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 200
-]
-LogEntry from 4 sty 2020 15:18:53
-[
-Selected method: PSql
-Selected size: 10
+Selected size: 100
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 3s 56ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 69,26311
+Average CPU Usage: 27,38789
+Memory:
+Minimum Memory Usage: 53,4313
+Maximum Memory Usage: 53,45792
+Average Memory Usage: 53,44058
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 5ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:18:55
+
+
+LogEntry from 13 sty 2020 19:24:31
 [
+------Basic data---------
 Selected method: NHib
-Selected size: 10
+Selected size: 100
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 1s 467ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 100
+Average CPU Usage: 25,54893
+Memory:
+Minimum Memory Usage: 53,23036
+Maximum Memory Usage: 53,38288
+Average Memory Usage: 53,27604
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 16ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:18:57
+
+
+LogEntry from 13 sty 2020 19:25:11
 [
-Selected method: EF
-Selected size: 10
-Save succeed: False
-Elapsed time: 0m 0s 11ms
-Error: System.Data.Entity.Core.MetadataException: Schema specified is not valid. Errors: 
-The mapping of CLR type to EDM type is ambiguous because multiple CLR types match the EDM type 'TableToInsert'. Previously found CLR type 'DataInserter.Model.EntityFramework.TableToInsert', newly found CLR type 'DataInserter.Model.NHibernate.TableToInsert'.
-   at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
-   at System.Data.Entity.Core.Metadata.Edm.MetadataOptimization.TryUpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
-   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
-   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
-   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
-   at System.Data.Entity.DbSet`1.Add(TEntity entity)
-   at DataInserter.Model.EntityFramework.EFDataInserter.SaveDataToDataBase() in C:\Projects\DataInserter\DataInserter\DataInserter\Model\EntityFramework\EFDataInserter.cs:line 24
-   at DataInserter.MainWindow.StartTest(Int32 fileSize, String insertMethodName) in C:\Projects\DataInserter\DataInserter\DataInserter\MainWindow.xaml.cs:line 200
-]
-LogEntry from 4 sty 2020 15:22:10
-[
-Selected method: NHib
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 627ms
-Error: ---
-]
-LogEntry from 4 sty 2020 15:22:18
-[
-Selected method: EF
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 5s 774ms
-Error: ---
-]
-LogEntry from 4 sty 2020 15:22:24
-[
-Selected method: PSql
-Selected size: 10
-Save succeed: True
-Elapsed time: 0m 0s 10ms
-Error: ---
-]
-LogEntry from 4 sty 2020 15:22:33
-[
+------Basic data---------
 Selected method: PSql
 Selected size: 1000
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 24s 198ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 30,2701
+Average CPU Usage: 15,01279
+Memory:
+Minimum Memory Usage: 53,15855
+Maximum Memory Usage: 53,42593
+Average Memory Usage: 53,23473
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 249ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:22:35
+
+
+LogEntry from 13 sty 2020 19:25:56
 [
+------Basic data---------
 Selected method: EF
 Selected size: 1000
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 40s 808ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 32,70845
+Average CPU Usage: 23,06283
+Memory:
+Minimum Memory Usage: 53,16875
+Maximum Memory Usage: 53,42859
+Average Memory Usage: 53,30014
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 405ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 15:22:38
+
+
+LogEntry from 13 sty 2020 19:26:17
 [
+------Basic data---------
 Selected method: NHib
 Selected size: 1000
+Number of tests: 100
+
+------Measure Data-------
+Elapsed time: 0m 14s 187ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 32,73413
+Average CPU Usage: 19,10257
+Memory:
+Minimum Memory Usage: 53,36234
+Maximum Memory Usage: 53,57713
+Average Memory Usage: 53,44649
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 115ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 16:25:00
+
+
+LogEntry from 13 sty 2020 19:41:41
 [
+------Basic data---------
 Selected method: PSql
-Selected size: 100
+Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 0m 23s 723ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 16,55306
+Average CPU Usage: 13,37484
+Memory:
+Minimum Memory Usage: 53,15713
+Maximum Memory Usage: 53,23363
+Average Memory Usage: 53,19139
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 36ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 16:25:06
+
+
+LogEntry from 13 sty 2020 19:44:27
 [
-Selected method: EF
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 875ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:25:11
-[
-Selected method: NHib
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 643ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:26:03
-[
-Selected method: NHib
-Selected size: 100000
-Save succeed: True
-Elapsed time: 0m 10s 64ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:30:55
-[
-Selected method: EF
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 769ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:30:58
-[
-Selected method: NHib
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 624ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:31:00
-[
-Selected method: PSql
-Selected size: 100
-Save succeed: True
-Elapsed time: 0m 0s 38ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:31:14
-[
-Selected method: EF
-Selected size: 1000
-Save succeed: True
-Elapsed time: 0m 0s 417ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:31:17
-[
-Selected method: NHib
-Selected size: 1000
-Save succeed: True
-Elapsed time: 0m 0s 117ms
-Error: ---
-]
-LogEntry from 4 sty 2020 16:31:42
-[
+------Basic data---------
 Selected method: EF
 Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 2m 31s 360ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 23,45948
+Average CPU Usage: 17,94161
+Memory:
+Minimum Memory Usage: 53,1837
+Maximum Memory Usage: 53,85361
+Average Memory Usage: 53,51517
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 15s 452ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 16:32:16
+
+
+LogEntry from 13 sty 2020 19:44:48
 [
+------Basic data---------
+Selected method: NHib
+Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 0m 10s 174ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 20,1251
+Average CPU Usage: 17,02296
+Memory:
+Minimum Memory Usage: 53,39558
+Maximum Memory Usage: 53,60504
+Average Memory Usage: 53,49852
+
+----------Stauts---------
+Save succeed: True
+Error: ---
+]
+
+
+LogEntry from 13 sty 2020 19:46:07
+[
+------Basic data---------
+Selected method: PSql
+Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 0m 23s 760ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 16,94878
+Average CPU Usage: 13,96133
+Memory:
+Minimum Memory Usage: 53,59919
+Maximum Memory Usage: 53,8729
+Average Memory Usage: 53,66641
+
+----------Stauts---------
+Save succeed: True
+Error: ---
+]
+
+
+LogEntry from 13 sty 2020 19:48:56
+[
+------Basic data---------
+Selected method: EF
+Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 2m 30s 566ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 22,69892
+Average CPU Usage: 18,02137
+Memory:
+Minimum Memory Usage: 53,56286
+Maximum Memory Usage: 53,72149
+Average Memory Usage: 53,66382
+
+----------Stauts---------
+Save succeed: True
+Error: ---
+]
+
+
+LogEntry from 13 sty 2020 19:49:21
+[
+------Basic data---------
+Selected method: NHib
+Selected size: 10000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 0m 10s 138ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 23,82728
+Average CPU Usage: 18,37451
+Memory:
+Minimum Memory Usage: 53,59715
+Maximum Memory Usage: 54,08733
+Average Memory Usage: 53,86443
+
+----------Stauts---------
+Save succeed: True
+Error: ---
+]
+
+
+LogEntry from 13 sty 2020 19:53:39
+[
+------Basic data---------
 Selected method: PSql
 Selected size: 100000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 3m 56s 123ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 15,64051
+Average CPU Usage: 13,42092
+Memory:
+Minimum Memory Usage: 52,9161
+Maximum Memory Usage: 53,72388
+Average Memory Usage: 53,23974
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 24s 687ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 17:18:25
+
+
+LogEntry from 13 sty 2020 20:49:16
 [
-Selected method: PSql
-Selected size: 10
+------Basic data---------
+Selected method: EF
+Selected size: 100000
 Number of tests: 1
+
+------Measure Data-------
+Elapsed time: 29m 21s 665ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 18,92475
+Average CPU Usage: 9,462373
+Memory:
+Minimum Memory Usage: 52,89939
+Maximum Memory Usage: 54,33387
+Average Memory Usage: 53,61663
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 10ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 17:18:40
+
+
+LogEntry from 13 sty 2020 20:49:33
 [
-Selected method: PSql
-Selected size: 10
-Number of tests: 2
+------Basic data---------
+Selected method: NHib
+Selected size: 100000
+Number of tests: 1
+
+------Measure Data-------
+Elapsed time: 0m 9s 806ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 19,87396
+Average CPU Usage: 9,936978
+Memory:
+Minimum Memory Usage: 54,55667
+Maximum Memory Usage: 54,56361
+Average Memory Usage: 54,56014
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 0s 8ms
 Error: ---
 ]
-LogEntry from 4 sty 2020 17:18:43
+
+
+LogEntry from 13 sty 2020 20:50:32
 [
-Selected method: PSql
-Selected size: 10
-Number of tests: 2
-Save succeed: True
-Elapsed time: 0m 0s 10ms
-Error: ---
-]
-LogEntry from 5 sty 2020 15:29:44
-[
-Selected method: PSql
-Selected size: 1000
-Number of tests: 3
-Save succeed: True
-Elapsed time: 0m 0s 893ms
-Error: ---
-]
-LogEntry from 5 sty 2020 15:54:38
-[
-Selected method: PSql
-Selected size: 1000
+------Basic data---------
+Selected method: NHib
+Selected size: 100000
 Number of tests: 5
+
+------Measure Data-------
+Elapsed time: 0m 52s 578ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 22,47087
+Average CPU Usage: 16,57635
+Memory:
+Minimum Memory Usage: 54,46699
+Maximum Memory Usage: 55,23148
+Average Memory Usage: 54,91262
+
+----------Stauts---------
 Save succeed: True
-Elapsed time: 0m 1s 867ms
 Error: ---
 ]
+
+
+LogEntry from 13 sty 2020 20:52:45
+[
+------Basic data---------
+Selected method: NHib
+Selected size: 100000
+Number of tests: 10
+
+------Measure Data-------
+Elapsed time: 2m 2s 413ms
+CPU:
+Minimum CPU Usage: 0
+Maximum CPU Usage: 22,57552
+Average CPU Usage: 17,49934
+Memory:
+Minimum Memory Usage: 54,67297
+Maximum Memory Usage: 55,85929
+Average Memory Usage: 55,16399
+
+----------Stauts---------
+Save succeed: True
+Error: ---
+]
+
+
